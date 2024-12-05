@@ -1,7 +1,7 @@
 # FIXED
 
 src/ADCP_frames.obj: ../src/ADCP_frames.c
-src/ADCP_frames.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_frames.h
+src/ADCP_frames.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_frames.h
 src/ADCP_frames.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdint.h
 src/ADCP_frames.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_ti_config.h
 src/ADCP_frames.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/linkage.h
@@ -15,7 +15,7 @@ src/ADCP_frames.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430
 
 ../src/ADCP_frames.c:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_frames.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_frames.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdint.h:
 

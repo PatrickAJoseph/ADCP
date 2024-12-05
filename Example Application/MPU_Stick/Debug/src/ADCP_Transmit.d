@@ -1,8 +1,8 @@
 # FIXED
 
 src/ADCP_Transmit.obj: ../src/ADCP_Transmit.c
-src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_Transmit.h
-src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP.h
+src/ADCP_Transmit.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_Transmit.h
+src/ADCP_Transmit.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdint.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_ti_config.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/linkage.h
@@ -14,7 +14,7 @@ src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp4
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/machine/_stdint.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/sys/_stdint.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdlib.h
-src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_frames.h
+src/ADCP_Transmit.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_frames.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430fr2355.h
 src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/in430.h
@@ -24,9 +24,9 @@ src/ADCP_Transmit.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/le
 
 ../src/ADCP_Transmit.c:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_Transmit.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_Transmit.h:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdint.h:
 
@@ -50,7 +50,7 @@ D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/s
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdlib.h:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/ADCP_frames.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/ADCP_frames.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h:
 

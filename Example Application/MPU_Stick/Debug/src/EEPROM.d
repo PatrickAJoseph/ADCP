@@ -1,8 +1,8 @@
 # FIXED
 
 src/EEPROM.obj: ../src/EEPROM.c
-src/EEPROM.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/EEPROM.h
-src/EEPROM.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/i2c.h
+src/EEPROM.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/EEPROM.h
+src/EEPROM.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/i2c.h
 src/EEPROM.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h
 src/EEPROM.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430fr2355.h
 src/EEPROM.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/in430.h
@@ -22,9 +22,9 @@ src/EEPROM.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6
 
 ../src/EEPROM.c:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/EEPROM.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/EEPROM.h:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/i2c.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/i2c.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h:
 

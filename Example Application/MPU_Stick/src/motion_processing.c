@@ -936,7 +936,7 @@ void MP_update()
     MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_GYRO_X  = MP.motion_detection.motion_detection_segments.gyr_x;
     MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_GYRO_Y  = MP.motion_detection.motion_detection_segments.gyr_y;
     MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_GYRO_Z  = MP.motion_detection.motion_detection_segments.gyr_z;
-    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_PITCH   = MP.motion_detection.motion_detection_segments.roll;
-    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_YAW     = MP.motion_detection.motion_detection_segments.pitch;
-    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_ROLL    = MP.motion_detection.motion_detection_segments.yaw;
+    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_ROLL   = MP.motion_detection.motion_detection_segments.roll;
+    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_PITCH     = MP.motion_detection.motion_detection_segments.pitch;
+    MD_OUTPUT.MD_OUTPUT_segments.MD_OUTPUT_YAW    = MP.motion_detection.motion_detection_segments.yaw;
 }

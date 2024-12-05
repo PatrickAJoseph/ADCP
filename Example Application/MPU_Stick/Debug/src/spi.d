@@ -1,7 +1,7 @@
 # FIXED
 
 src/spi.obj: ../src/spi.c
-src/spi.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/spi.h
+src/spi.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/spi.h
 src/spi.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h
 src/spi.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430fr2355.h
 src/spi.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/in430.h
@@ -21,7 +21,7 @@ src/spi.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.
 
 ../src/spi.c:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/spi.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/spi.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h:
 

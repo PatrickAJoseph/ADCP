@@ -1,7 +1,7 @@
 # FIXED
 
 src/i2c.obj: ../src/i2c.c
-src/i2c.obj: D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/i2c.h
+src/i2c.obj: F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/i2c.h
 src/i2c.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h
 src/i2c.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430fr2355.h
 src/i2c.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/in430.h
@@ -21,7 +21,7 @@ src/i2c.obj: D:/MICROCONTROLLERS/TI/CCS/ccs/tools/compiler/ti-cgt-msp430_21.6.1.
 
 ../src/i2c.c:
 
-D:/MICROCONTROLLERS/TI/MSP430FR2355/workspace/MPU_Stick/inc/i2c.h:
+F:/Projects/ADCP/Github_Push_Pull/ADCP/Example\ Application/MPU_Stick/inc/i2c.h:
 
 D:/MICROCONTROLLERS/TI/CCS/ccs/ccs_base/msp430/include/msp430.h:
 
