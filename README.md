@@ -1,1 +1,2 @@
 Advanced Debug Control Protocol is a fixed frame protocol enabling communication between a single host and upto 16 device nodes using UART as the data link layer. The repository provides device & host side protocol drivers written in C/C++ and LabVIEW example code and a LabVIEW class for the protocol to make LabVIEW development simpler.
+Please refer to **ADCP/docs** for more details about this protocol.
