@@ -427,13 +427,13 @@
 		<Property Name="NI.ClassItem.State" Type="Int">1074541056</Property>
 	</Item>
 	<Item Name="ADCP_Remote_Request_Frames.vi" Type="VI" URL="../ADCP_Remote_Request_Frames.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;%!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!/$%&amp;%1V!O&lt;(:D&lt;'&amp;T=Q!!#%&amp;%1V!A4X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!V!"1!(4H6N:8*J9Q!?1%!!!@````]!"R&amp;3:8&amp;V:8.U)%:S97VF)%F%=Q!.1!-!"UZP:'5A351!)%"Q!"Y!!!Y-152$5#ZM&gt;G.M98.T!!!(152$5#"*&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!)!!E!#A-!!(A!!!E!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!1I!!!!)!!!!#A!!$1!!!!Q!!!!!!!!!!!!!!1!,!!!!!!</Property>
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,$!!!!'Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!(5!'!":"=("M;7.B&gt;'FP&lt;C"F=H*P=C"D&lt;W2F!!"L1"9!"!2/4UZ&amp;&amp;U.04EZ&amp;1V2*4UZ@15R325&amp;%76^05%6/'5.04EZ&amp;1V2*4UZ@15R325&amp;%76^$4%^4251635Z715R*2&amp;^'5E&amp;.26^326&amp;626.5!!!54G6U&gt;W^S;S"&amp;=H*P=C"4&gt;'&amp;U&gt;8-!!"&amp;!"A!+586F&gt;75A5WF[:1!!+U!7!!-#4UM&amp;25V16&amp;E%2F6-4!!65G6D:7FW:8)A586F&gt;75A5X2B&gt;(6T!"2!)1Z4&gt;'&amp;U&gt;8-A5G6R&gt;76T&gt;!!!%%!B#F.U982V=S""9WM!!#2!5!!'!!1!"1!'!!=!#!!*%%6S=G^S)'&amp;O:#"4&gt;'&amp;U&gt;8-!!!N!"1!&amp;2EF%8T-!#U!&amp;!!6'352@-A!,1!5!"5:*2&amp;]R!!N!"1!&amp;2EF%8T!!#U!&amp;!!6/8U:*2!!-1#%(5EV58V*&amp;51!-1#%(5EV58U&amp;$3Q!E1&amp;!!"Q!,!!Q!$1!/!!]!%!!2$F*F&lt;7^U:3"3:8&amp;V:8.U!!!C1(!!(A!!$AR"2%.1,GRW9WRB=X-!!!B"2%.1)%^V&gt;!!!"!!!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!&amp;!!&gt;/&gt;7VF=GFD!"Z!1!!"`````Q!7%6*F=86F=X1A2H*B&lt;75A352T!!V!!Q!(4G^E:3"*2!!A1(!!(A!!$AR"2%.1,GRW9WRB=X-!!!&gt;"2%.1)%FO!'%!]!!-!!-!#A!3!"-!&amp;!!5!"1!&amp;!!6!"=!'!!:!Q!!?!!!#1!!!!E!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!"#A!!!!A!!!!+!!!.!!!!$!!!!!!!!!!!!!!"!"I!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1350836752</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1342710290</Property>
 	</Item>
 	<Item Name="ADCP_RREQ_Packet.ctl" Type="VI" URL="../ADCP_RREQ_Packet.ctl">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!-!!!!!1!%!!!!!1!!!!!!!!</Property>

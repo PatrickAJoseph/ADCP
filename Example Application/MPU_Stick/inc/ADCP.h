@@ -52,7 +52,7 @@
 /* General parameters. */
 
 #define ADCP_NODE_ID								(uint8_t)0
-#define ADCP_N_FRAMES							    (uint8_t)47
+#define ADCP_N_FRAMES							    (uint8_t)48
 #define ADCP_N_TRANSMIT_FRAMES                      (uint8_t)17
 
 typedef struct

@@ -72,7 +72,7 @@ void ADCP::processed_to_raw(PROCESSED_FRAME* processed, RAW_FRAME* raw)
   /* The most significant byte contains the carry result offset by 0x0B. */	
 
   #ifdef DEBUG
-    (this->debugLog) << "Entering function: ADCP::raw_to_processed ....." << endl;
+    (this->debugLog) << "Entering function: ADCP::processed_to_raw ....." << endl;
   #endif
 	
   uint8_t carry = (processed->byte[0] - 0x0B);
@@ -97,7 +97,7 @@ void ADCP::processed_to_raw(PROCESSED_FRAME* processed, RAW_FRAME* raw)
 	(uint16_t)raw->byte[3] << " " << (uint16_t)raw->byte[4] << " " <<
 	(uint16_t)raw->byte[5] << " " << (uint16_t)raw->byte[6] << endl;	
 
-    (this->debugLog) << "Exiting function: ADCP::raw_to_processed ....." << endl;
+    (this->debugLog) << "Exiting function: ADCP::processed_to_raw ....." << endl;
 
   #endif	  
 }
@@ -1507,17 +1507,32 @@ double ADCP::read_parameter(unsigned int index)
 
 double ADCP::read_parameter(string name)
 {
+  #ifdef DEBUG
+	(this->debugLog) << "Entering function: read_parameter" << "(" << name << ")" << endl;
+  #endif	
+	
   unsigned int index = 0;	
   double value = 0;	
+  unsigned int found = 0;
 	
   for( auto iParameter = (this->parameters).begin() ; iParameter != (this->parameters).end() ; iParameter++ )
   {
     if( (this->parameters[index]).parameter_name == name )
 	{
-	  value = ADCP::read_parameter(index);	
+	  found = 1;
+	  value = ADCP::read_parameter(index);
+	  break;
 	}		
     index++;	  
   }
+
+  #ifdef DEBUG
+	(this->debugLog) << "Parameter " << name << " not found " << endl;
+  #endif	
+
+  #ifdef DEBUG
+	(this->debugLog) << "Entering function: << read_parameter" << "(" << name << ")" << endl;
+  #endif	
 
   return(value);  
 }
@@ -1753,7 +1768,7 @@ vector<string> ADCP::serial_port_scan()
 		/* COM Port is configurable. */
 		cout << "COM" << com_index << " available !" << endl;
 
-		comPorts.push_back("COM" + com_index);
+		comPorts.push_back("COM" + to_string(com_index));
 
 		#ifdef DEBUG
 		  (this->debugLog) << "COM" << com_index << " available !" << endl;
@@ -1961,6 +1976,8 @@ void ADCP::receive_packet(PROCESSED_FRAME* packet)
 	
 	for(int i = 0 ; i < 9 ; i++)
 		buffer[i] = tempBuffer[i];	
+	
+	//tempBuffer.clear();
   }
   
   /*
@@ -2008,6 +2025,8 @@ void ADCP::receive_packet(PROCESSED_FRAME* packet)
   #endif 	
 
   	
+	
+	
   #ifdef DEBUG
 	(this->debugLog) << "Exiting function: receive_packet" << endl;
   #endif		
@@ -2892,6 +2911,58 @@ void ADCP::update_control_frame(ADCP::RAW_FRAME rawFrame)
 	}  
 }
 
+void ADCP::read_and_update_frame(uint32_t timeout_ms)
+{
+	#ifdef DEBUG
+		(this->debugLog) << "Entering function: read_and_update_frame" << endl;
+	#endif
+	
+	ADCP::RAW_FRAME 		rawFrame;	
+	ADCP::PROCESSED_FRAME processedFrame;	
+	Frame_Type_t control_frame_type = INVALID;
+
+	receive_packet(&processedFrame,timeout_ms);  
+	processed_to_raw(&processedFrame, &rawFrame);
+
+	control_frame_type = (ADCP::Frame_Type_t)((rawFrame.byte[0] >> 4)& 0x07 );
+
+    if( control_frame_type != 0 )
+	{
+		update_control_frame(rawFrame);
+	}
+	else if( (unsigned int)control_frame_type == 0 )
+	{
+	  uint32_t tempFrameData;
+	  uint8_t tempNodeID;
+      uint8_t tempFrameID;
+      uint8_t tempPriority;
+      //ADCP::PROCESSED_FRAME tempProcessedFrame;	  
+		
+	  get_DF((void*)&tempFrameData,&tempNodeID,&tempFrameID,&tempPriority,&processedFrame);
+
+	  if( is_frame_valid(tempNodeID, tempFrameID) )
+	  {
+
+		for(int i = 0 ; this->frames.size() ; i++)
+		{
+		  if( (this->frames[i].node_ID == tempNodeID) && (this->frames[i].frame_ID == tempFrameID) )
+		  {
+		    this->frames[i].data = tempFrameData;
+			break;
+		  }
+		}
+		
+		#ifdef DEBUG
+			(this->debugLog) << "Read data packet: " << "NODE_ID: " << tempNodeID << " FRAME_ID: " << tempFrameID << endl;
+		#endif
+	  }	  
+	}
+		
+	#ifdef DEBUG
+		(this->debugLog) << "Exiting function: read_and_update_frame" << endl;
+	#endif
+}
+
 uint8_t ADCP::read_control_frame(unsigned int node_id, ADCP::Frame_Type_t target_control_frame, uint32_t timeout_ms)
 {
   #ifdef DEBUG	
@@ -2924,7 +2995,7 @@ uint8_t ADCP::read_control_frame(unsigned int node_id, ADCP::Frame_Type_t target
       uint8_t tempPriority;
       ADCP::PROCESSED_FRAME tempProcessedFrame;	  
 		
-	  get_DF((void*)&tempFrameData,&tempNodeID,&tempFrameID,&tempPriority,&tempProcessedFrame);
+	  get_DF((void*)&tempFrameData,&tempNodeID,&tempFrameID,&tempPriority,&processedFrame);
 
 	  if( is_frame_valid(tempNodeID, tempFrameID) )
 	  {
@@ -3586,6 +3657,22 @@ uint8_t ADCP::remote_frame_request(unsigned int node_id,vector<string> frames, u
   return(1);
 }
 
+uint8_t ADCP::remote_frame_request(unsigned int node_id,vector<string> frames, uint32_t interval, uint32_t tries)
+{
+	uint8_t status = 0;
+	
+	for(int i = 0 ; i < tries ; i++)
+	{
+		if( status = remote_frame_request(node_id,frames,interval) )
+		{
+			status = 1;
+			break;
+		}
+	}
+
+	return(status);	
+}
+
 uint8_t ADCP::get_error_and_status(unsigned int node_id,uint32_t timeout_ms)
 {
   #ifdef DEBUG
@@ -3715,6 +3802,21 @@ ADCP::Network_Error_Status_t ADCP::get_node_network_error_status(uint8_t node_id
 	return(error_status);
 }
 
+ADCP::Network_Error_Status_t ADCP::get_node_network_error_status(uint8_t node_id,uint32_t interval,uint32_t tries)
+{
+	ADCP::Network_Error_Status_t status = ADCP::Network_Error_Status_t::TIMEOUT;
+	
+	for(int i = 0 ; i < tries ; i++)
+	{
+		if( ( status = get_node_network_error_status(node_id,interval) ) != ADCP::Network_Error_Status_t::TIMEOUT )
+		{
+			break;
+		}
+	}
+	
+	return(status);
+}
+
 uint8_t ADCP::get_node_receive_queue_count(uint8_t node_id,uint32_t timeout_ms)	
 {
 	#ifdef DEBUG
@@ -3801,7 +3903,7 @@ uint8_t ADCP::reset_node(uint8_t node_id, uint32_t timeout_ms)
 		(this->debugLog) << "Exiting function: reset_mode(" << node_id << "," << timeout_ms << ")" << endl;
 	#endif
 	
-	return( ( timeout_status == 0 ) && ( this->Connection_Management_Frame.SYNC_ACK ) );
+	return( ( timeout_status == 0 ) && ( (this->Connection_Management_Frame.SYNC_ACK == 1) ) );
 }
 
 uint8_t ADCP::reset_node(uint8_t node_id, uint32_t timeout_ms,uint32_t tries)
@@ -3835,6 +3937,8 @@ uint8_t ADCP::reset_node(uint8_t node_id, uint32_t timeout_ms,uint32_t tries)
 	#ifdef DEBUG
 		(this->debugLog) << "Exiting function: reset_node(" << node_id << "," << timeout_ms << "," << tries << ")" << endl;
 	#endif
+	
+	return(result);
 }
 
 

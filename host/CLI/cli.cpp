@@ -418,8 +418,8 @@ void cli_interpreter(string cmd, std::vector<string> parameter, std::vector<stri
 	else
 	{
 		cout << "Incorrect syntax" << endl;
-		cout << "SYNTAX: open_node_connection --node_id=[node_id] --timeout=[timeout_ms]" << endl;
-		cout << "        open_node_connection --node_id=[node_id] --timeout-[timeout_ms]" << endl;		
+		cout << "SYNTAX: close_node_connection --node_id=[node_id] --timeout=[timeout_ms]" << endl;
+		cout << "        close_node_connection --node_id=[node_id] --timeout-[timeout_ms]" << endl;		
 	}
   }
   //	Command to open a connection with target node.
@@ -447,7 +447,7 @@ void cli_interpreter(string cmd, std::vector<string> parameter, std::vector<stri
 			cout << "        open_node_connection --node_id=[node_id] --timeout-[timeout_ms]" << endl;
 		}
 	}
-	if( ( parameter[0] == "node_name" ) || ( parameter[0] == "name" ) )
+	else if( ( parameter[0] == "node_name" ) || ( parameter[0] == "name" ) )
 	{
 		try
 		{

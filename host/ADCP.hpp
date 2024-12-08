@@ -718,6 +718,15 @@ class ADCP
 	void generate_frame_files(unsigned int node_index);
 	
 	/*
+	*	@brief:						Reads a packet from serial port and updates the relevant packet.
+	*								The packet can be of any type.
+	*	@parameter timeout_ms:		Timeout of read operatin in milli-seconds.
+	*
+	*/
+	
+	void read_and_update_frame(uint32_t timeout_ms);
+	
+	/*
 	*  @brief:						Function to open connection with target device node.
 	*  @parameter node_id:			Index of the target device node.
 	*  @parameter timeout_ms:		Timeout of open connection request.		
@@ -745,6 +754,7 @@ class ADCP
 	*/
 	
 	uint8_t remote_frame_request(unsigned int node_id,vector<string> frames, uint32_t timeout_ms);
+	uint8_t remote_frame_request(unsigned int node_id,vector<string> frames, uint32_t interval, uint32_t tries);
 	
 	/*
 	*	@brief:						Function to get error and status of target device.
@@ -765,6 +775,7 @@ class ADCP
 	*/
 	
 	Network_Error_Status_t get_node_network_error_status(uint8_t node_id,uint32_t timeout_ms);
+	Network_Error_Status_t get_node_network_error_status(uint8_t node_id,uint32_t interval,uint32_t tries);	
 	
 	/*
 	*	@brief:								Function to get size of target node receive buffer.

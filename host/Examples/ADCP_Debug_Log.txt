@@ -1,0 +1,2124 @@
+Entering function serial_port_init(COM13,38400)
+COM Port: COM13 not found
+COM13 not available for configuration.
+Communication parameters not set for COM13
+Communication timeouts NOT set successfully for COM13
+Exiting function serial_port_init(COM13,38400)
+Entering function: read_file(MPU_Stick.csv)
+Reading line from parameter file: 0
+Column [0] :PARAMETER_NAME
+Column [1] :DEVICE_NODE_NAME
+Column [2] :DEVICE_NODE_ID
+Column [3] :FRAME_NAME
+Column [4] :FRAME_ID
+Column [5] :DATA_TYPE
+Column [6] :START_BIT
+Column [7] :BIT_LENGTH
+Column [8] :FACTOR
+Column [9] :OFFSET/ENUM
+Column [10] :MINIMUM
+Column [11] :MAXIMUM
+Reading line from parameter file: 1
+Column [0] :IMU_X_ACCEL_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_X_RAW
+Column [4] :0
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_X_ACCEL_RAW
+Reading line from parameter file: 2
+Column [0] :IMU_X_GYRO_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_X_RAW
+Column [4] :0
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_X_GYRO_RAW
+Reading line from parameter file: 3
+Column [0] :IMU_Y_ACCEL_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Y_RAW
+Column [4] :1
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_Y_ACCEL_RAW
+Reading line from parameter file: 4
+Column [0] :IMU_Y_GYRO_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Y_RAW
+Column [4] :1
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_Y_GYRO_RAW
+Reading line from parameter file: 5
+Column [0] :IMU_Z_ACCEL_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Z_RAW
+Column [4] :2
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_Z_ACCEL_RAW
+Reading line from parameter file: 6
+Column [0] :IMU_Z_GYRO_RAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Z_RAW
+Column [4] :2
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :65535
+Parameter name:  IMU_Z_GYRO_RAW
+Reading line from parameter file: 7
+Column [0] :IMU_X_ACCEL_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_X_PROCESSED
+Column [4] :3
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  IMU_X_ACCEL_PROCESSED
+Reading line from parameter file: 8
+Column [0] :IMU_X_GYRO_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_X_PROCESSED
+Column [4] :3
+Column [5] :SIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :0.1
+Column [9] :0
+Column [10] :-250
+Column [11] :250
+Parameter name:  IMU_X_GYRO_PROCESSED
+Reading line from parameter file: 9
+Column [0] :IMU_Y_ACCEL_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Y_PROCESSED
+Column [4] :4
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  IMU_Y_ACCEL_PROCESSED
+Reading line from parameter file: 10
+Column [0] :IMU_Y_GYRO_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Y_PROCESSED
+Column [4] :4
+Column [5] :SIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :0.1
+Column [9] :0
+Column [10] :-250
+Column [11] :250
+Parameter name:  IMU_Y_GYRO_PROCESSED
+Reading line from parameter file: 11
+Column [0] :IMU_Z_ACCEL_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Z_PROCESSED
+Column [4] :5
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  IMU_Z_ACCEL_PROCESSED
+Reading line from parameter file: 12
+Column [0] :IMU_Z_GYRO_PROCESSED
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_Z_PROCESSED
+Column [4] :5
+Column [5] :SIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :0.1
+Column [9] :0
+Column [10] :-250
+Column [11] :250
+Parameter name:  IMU_Z_GYRO_PROCESSED
+Reading line from parameter file: 13
+Column [0] :IMU_CONFIG_SAMPLING_RATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_A
+Column [4] :6
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :16
+Column [8] :1
+Column [9] :0
+Column [10] :20
+Column [11] :500
+Parameter name:  IMU_CONFIG_SAMPLING_RATE
+Reading line from parameter file: 14
+Column [0] :IMU_CONFIG_CALIB_INTERVAL
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_A
+Column [4] :6
+Column [5] :UNSIGNED
+Column [6] :8
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :250
+Parameter name:  IMU_CONFIG_CALIB_INTERVAL
+Reading line from parameter file: 15
+Column [0] :IMU_CONFIG_CALIB_POINTS
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_A
+Column [4] :6
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :250
+Parameter name:  IMU_CONFIG_CALIB_POINTS
+Reading line from parameter file: 16
+Column [0] :IMU_CONFIG_GYRO_BW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_B
+Column [4] :7
+Column [5] :ENUM
+Column [6] :0
+Column [7] :3
+Column [8] :1
+Column [9] :IMU_GYRO_BW_NONE:IMU_GYRO_BW_184Hz:IMU_GYRO_BW_92Hz:IMU_GYRO_BW_41Hz:IMU_GYRO_BW_20Hz:IMU_GYRO_BW_10Hz:IMU_GYRO_BW_5Hz
+Column [10] :0
+Column [11] :7
+Parameter name:  IMU_CONFIG_GYRO_BW
+Reading line from parameter file: 17
+Column [0] :IMU_CONFIG_ACCEL_BW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_B
+Column [4] :7
+Column [5] :ENUM
+Column [6] :3
+Column [7] :3
+Column [8] :1
+Column [9] :IMU_ACCEL_BW_460Hz:IMU_ACCEL_BW_184Hz:IMU_ACCEL_BW_92Hz:IMU_ACCEL_BW_41Hz:IMU_ACCEL_BW_20Hz:IMU_ACCEL_BW_10Hz:IMU_ACCEL_BW_5Hz
+Column [10] :0
+Column [11] :7
+Parameter name:  IMU_CONFIG_ACCEL_BW
+Reading line from parameter file: 18
+Column [0] :IMU_CONFIG_GYRO_FS
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_B
+Column [4] :7
+Column [5] :ENUM
+Column [6] :6
+Column [7] :3
+Column [8] :1
+Column [9] :IMU_GYRO_FS_250DPS:IMU_GYRO_FS_500DPS:IMU_GYRO_FS_1000DPS:IMU_GYRO_FS_2000DPS
+Column [10] :0
+Column [11] :7
+Parameter name:  IMU_CONFIG_GYRO_FS
+Reading line from parameter file: 19
+Column [0] :IMU_CONFIG_ACCEL_FS
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_REG_B
+Column [4] :7
+Column [5] :ENUM
+Column [6] :9
+Column [7] :3
+Column [8] :1
+Column [9] :IMU_ACCEL_FS_2G:IMU_ACCEL_FS_4G:IMU_ACCEL_FS_8G:IMU_ACCEL_FS_16G
+Column [10] :0
+Column [11] :7
+Parameter name:  IMU_CONFIG_ACCEL_FS
+Reading line from parameter file: 20
+Column [0] :IMU_CONFIG_SAMPLING_RATE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_SAMPLING_RATE_WE
+Reading line from parameter file: 21
+Column [0] :IMU_CONFIG_CALIB_INTERVAL_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_CALIB_INTERVAL_WE
+Reading line from parameter file: 22
+Column [0] :IMU_CONFIG_CALIB_POINTS_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_CALIB_POINTS_WE
+Reading line from parameter file: 23
+Column [0] :IMU_CONFIG_GYRO_BW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_GYRO_BW_WE
+Reading line from parameter file: 24
+Column [0] :IMU_CONFIG_ACCEL_BW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :4
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_ACCEL_BW_WE
+Reading line from parameter file: 25
+Column [0] :IMU_CONFIG_GYRO_FS_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :5
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_GYRO_FS_WE
+Reading line from parameter file: 26
+Column [0] :IMU_CONFIG_ACCEL_FS_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :IMU_CONFIG_WRITE_ENABLE
+Column [4] :8
+Column [5] :UNSIGNED
+Column [6] :6
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CONFIG_ACCEL_FS_WE
+Reading line from parameter file: 27
+Column [0] :MD_ACCEL_X_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :0
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_ACCEL_X_THRESHOLD_TYPE
+Reading line from parameter file: 28
+Column [0] :MD_ACCEL_Y_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :3
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_ACCEL_Y_THRESHOLD_TYPE
+Reading line from parameter file: 29
+Column [0] :MD_ACCEL_Z_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :6
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_ACCEL_Z_THRESHOLD_TYPE
+Reading line from parameter file: 30
+Column [0] :MD_GYRO_X_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :9
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_GYRO_X_THRESHOLD_TYPE
+Reading line from parameter file: 31
+Column [0] :MD_GYRO_Y_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :12
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_GYRO_Y_THRESHOLD_TYPE
+Reading line from parameter file: 32
+Column [0] :MD_GYRO_Z_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :15
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_GYRO_Z_THRESHOLD_TYPE
+Reading line from parameter file: 33
+Column [0] :MD_ROLL_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :18
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_ROLL_THRESHOLD_TYPE
+Reading line from parameter file: 34
+Column [0] :MD_PITCH_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :21
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_PITCH_THRESHOLD_TYPE
+Reading line from parameter file: 35
+Column [0] :MD_YAW_THRESHOLD_TYPE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_THRESHOLD_TYPE
+Column [4] :9
+Column [5] :ENUM
+Column [6] :24
+Column [7] :3
+Column [8] :1
+Column [9] :ABS_LESSER_THAN:ABS_GREATER_THAN:LESSER_THAN:GREATER_THAN:WINDOWED_MODE_WITHIN_BOUNDS:WINDOWED_MODE_OUTSIDE_BOUNDS
+Column [10] :0
+Column [11] :7
+Parameter name:  MD_YAW_THRESHOLD_TYPE
+Reading line from parameter file: 36
+Column [0] :MD_ACCEL_X_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_X_THRESHOLD_LOW
+Column [4] :10
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_X_THRESHOLD_LOW
+Reading line from parameter file: 37
+Column [0] :MD_ACCEL_X_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_X_THRESHOLD_HIGH
+Column [4] :11
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_X_THRESHOLD_HIGH
+Reading line from parameter file: 38
+Column [0] :MD_ACCEL_Y_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_Y_THRESHOLD_LOW
+Column [4] :12
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_Y_THRESHOLD_LOW
+Reading line from parameter file: 39
+Column [0] :MD_ACCEL_Y_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_Y_THRESHOLD_HIGH
+Column [4] :13
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_Y_THRESHOLD_HIGH
+Reading line from parameter file: 40
+Column [0] :MD_ACCEL_Z_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_Z_THRESHOLD_LOW
+Column [4] :14
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_Z_THRESHOLD_LOW
+Reading line from parameter file: 41
+Column [0] :MD_ACCEL_Z_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ACCEL_Z_THRESHOLD_HIGH
+Column [4] :15
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-16
+Column [11] :16
+Parameter name:  MD_ACCEL_Z_THRESHOLD_HIGH
+Reading line from parameter file: 42
+Column [0] :MD_GYRO_X_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_X_THRESHOLD_LOW
+Column [4] :16
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_X_THRESHOLD_LOW
+Reading line from parameter file: 43
+Column [0] :MD_GYRO_X_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_X_THRESHOLD_HIGH
+Column [4] :17
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_X_THRESHOLD_HIGH
+Reading line from parameter file: 44
+Column [0] :MD_GYRO_Y_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_Y_THRESHOLD_LOW
+Column [4] :18
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_Y_THRESHOLD_LOW
+Reading line from parameter file: 45
+Column [0] :MD_GYRO_Y_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_Y_THRESHOLD_HIGH
+Column [4] :19
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_Y_THRESHOLD_HIGH
+Reading line from parameter file: 46
+Column [0] :MD_GYRO_Z_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_Z_THRESHOLD_LOW
+Column [4] :20
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_Z_THRESHOLD_LOW
+Reading line from parameter file: 47
+Column [0] :MD_GYRO_Z_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_GYRO_Z_THRESHOLD_HIGH
+Column [4] :21
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-2000
+Column [11] :2000
+Parameter name:  MD_GYRO_Z_THRESHOLD_HIGH
+Reading line from parameter file: 48
+Column [0] :MD_ROLL_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ROLL_THRESHOLD_LOW
+Column [4] :22
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_ROLL_THRESHOLD_LOW
+Reading line from parameter file: 49
+Column [0] :MD_ROLL_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_ROLL_THRESHOLD_HIGH
+Column [4] :23
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_ROLL_THRESHOLD_HIGH
+Reading line from parameter file: 50
+Column [0] :MD_PITCH_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_PITCH_THRESHOLD_LOW
+Column [4] :24
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_PITCH_THRESHOLD_LOW
+Reading line from parameter file: 51
+Column [0] :MD_PITCH_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_PITCH_THRESHOLD_HIGH
+Column [4] :25
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_PITCH_THRESHOLD_HIGH
+Reading line from parameter file: 52
+Column [0] :MD_YAW_THRESHOLD_LOW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_YAW_THRESHOLD_LOW
+Column [4] :26
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_YAW_THRESHOLD_LOW
+Reading line from parameter file: 53
+Column [0] :MD_YAW_THRESHOLD_HIGH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_YAW_THRESHOLD_HIGH
+Column [4] :27
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MD_YAW_THRESHOLD_HIGH
+Reading line from parameter file: 54
+Column [0] :MP_ROLL_FILTER_CONSTANT
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_ROLL_FILTER_CONSTANT
+Column [4] :28
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_ROLL_FILTER_CONSTANT
+Reading line from parameter file: 55
+Column [0] :MP_PITCH_FILTER_CONSTANT
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_PITCH_FILTER_CONSTANT
+Column [4] :29
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_PITCH_FILTER_CONSTANT
+Reading line from parameter file: 56
+Column [0] :MP_YAW_FILTER_CONSTANT
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_YAW_FILTER_CONSTANT
+Column [4] :30
+Column [5] :FLOAT32
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_YAW_FILTER_CONSTANT
+Reading line from parameter file: 57
+Column [0] :MP_ROLL_ACCEL
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_ROLL_ACCEL
+Column [4] :31
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_ROLL_ACCEL
+Reading line from parameter file: 58
+Column [0] :MP_ROLL_GYRO
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_ROLL_GYRO
+Column [4] :32
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_ROLL_GYRO
+Reading line from parameter file: 59
+Column [0] :MP_ROLL_FILTER
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_ROLL_FILTER
+Column [4] :33
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_ROLL_FILTER
+Reading line from parameter file: 60
+Column [0] :MP_PITCH_ACCEL
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_PITCH_ACCEL
+Column [4] :34
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_PITCH_ACCEL
+Reading line from parameter file: 61
+Column [0] :MP_PITCH_GYRO
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_PITCH_GYRO
+Column [4] :35
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_PITCH_GYRO
+Reading line from parameter file: 62
+Column [0] :MP_PITCH_FILTER
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_PITCH_FILTER
+Column [4] :36
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_PITCH_FILTER
+Reading line from parameter file: 63
+Column [0] :MP_YAW_ACCEL
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_YAW_ACCEL
+Column [4] :37
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_YAW_ACCEL
+Reading line from parameter file: 64
+Column [0] :MP_YAW_GYRO
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_YAW_GYRO
+Column [4] :38
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_YAW_GYRO
+Reading line from parameter file: 65
+Column [0] :MP_YAW_FILTER
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MP_YAW_FILTER
+Column [4] :39
+Column [5] :SIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :0.001
+Column [9] :0
+Column [10] :-180
+Column [11] :180
+Parameter name:  MP_YAW_FILTER
+Reading line from parameter file: 66
+Column [0] :MD_ACCEL_X_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_X_THRESHOLD_LOW_WE
+Reading line from parameter file: 67
+Column [0] :MD_ACCEL_X_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_X_THRESHOLD_HIGH_WE
+Reading line from parameter file: 68
+Column [0] :MD_ACCEL_Y_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Y_THRESHOLD_LOW_WE
+Reading line from parameter file: 69
+Column [0] :MD_ACCEL_Y_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Y_THRESHOLD_HIGH_WE
+Reading line from parameter file: 70
+Column [0] :MD_ACCEL_Z_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :4
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Z_THRESHOLD_LOW_WE
+Reading line from parameter file: 71
+Column [0] :MD_ACCEL_Z_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :5
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Z_THRESHOLD_HIGH_WE
+Reading line from parameter file: 72
+Column [0] :MD_GYRO_X_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :6
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_X_THRESHOLD_LOW_WE
+Reading line from parameter file: 73
+Column [0] :MD_GYRO_X_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :7
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_X_THRESHOLD_HIGH_WE
+Reading line from parameter file: 74
+Column [0] :MD_GYRO_Y_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :8
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Y_THRESHOLD_LOW_WE
+Reading line from parameter file: 75
+Column [0] :MD_GYRO_Y_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :9
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Y_THRESHOLD_HIGH_WE
+Reading line from parameter file: 76
+Column [0] :MD_GYRO_Z_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :10
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Z_THRESHOLD_LOW_WE
+Reading line from parameter file: 77
+Column [0] :MD_GYRO_Z_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :11
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Z_THRESHOLD_HIGH_WE
+Reading line from parameter file: 78
+Column [0] :MD_ROLL_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :12
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ROLL_THRESHOLD_LOW_WE
+Reading line from parameter file: 79
+Column [0] :MD_ROLL_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :13
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ROLL_THRESHOLD_HIGH_WE
+Reading line from parameter file: 80
+Column [0] :MD_PITCH_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :14
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_PITCH_THRESHOLD_LOW_WE
+Reading line from parameter file: 81
+Column [0] :MD_PITCH_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :15
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_PITCH_THRESHOLD_HIGH_WE
+Reading line from parameter file: 82
+Column [0] :MD_YAW_THRESHOLD_LOW_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_YAW_THRESHOLD_LOW_WE
+Reading line from parameter file: 83
+Column [0] :MD_YAW_THRESHOLD_HIGH_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :17
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_YAW_THRESHOLD_HIGH_WE
+Reading line from parameter file: 84
+Column [0] :MP_ROLL_FILTER_CONSTANT_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :18
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_ROLL_FILTER_CONSTANT_WE
+Reading line from parameter file: 85
+Column [0] :MP_PITCH_FILTER_CONSTANT_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :19
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_PITCH_FILTER_CONSTANT_WE
+Reading line from parameter file: 86
+Column [0] :MP_YAW_FILTER_CONSTANT_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :20
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_YAW_FILTER_CONSTANT_WE
+Reading line from parameter file: 87
+Column [0] :MD_ACCEL_X_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :21
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_X_THRESHOLD_TYPE_WE
+Reading line from parameter file: 88
+Column [0] :MD_ACCEL_Y_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :22
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Y_THRESHOLD_TYPE_WE
+Reading line from parameter file: 89
+Column [0] :MD_ACCEL_Z_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :23
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ACCEL_Z_THRESHOLD_TYPE_WE
+Reading line from parameter file: 90
+Column [0] :MD_GYRO_X_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :24
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_X_THRESHOLD_TYPE_WE
+Reading line from parameter file: 91
+Column [0] :MD_GYRO_Y_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :25
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Y_THRESHOLD_TYPE_WE
+Reading line from parameter file: 92
+Column [0] :MD_GYRO_Z_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :26
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_GYRO_Z_THRESHOLD_TYPE_WE
+Reading line from parameter file: 93
+Column [0] :MD_ROLL_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :27
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_ROLL_THRESHOLD_TYPE_WE
+Reading line from parameter file: 94
+Column [0] :MD_PITCH_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :28
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_PITCH_THRESHOLD_TYPE_WE
+Reading line from parameter file: 95
+Column [0] :MD_YAW_THRESHOLD_TYPE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_WRITE_CONFIG
+Column [4] :40
+Column [5] :UNSIGNED
+Column [6] :29
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_YAW_THRESHOLD_TYPE_WE
+Reading line from parameter file: 96
+Column [0] :MD_OUTPUT_ACCEL_X
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_ACCEL_X
+Reading line from parameter file: 97
+Column [0] :MD_OUTPUT_ACCEL_Y
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_ACCEL_Y
+Reading line from parameter file: 98
+Column [0] :MD_OUTPUT_ACCEL_Z
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_ACCEL_Z
+Reading line from parameter file: 99
+Column [0] :MD_OUTPUT_GYRO_X
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_GYRO_X
+Reading line from parameter file: 100
+Column [0] :MD_OUTPUT_GYRO_Y
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :4
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_GYRO_Y
+Reading line from parameter file: 101
+Column [0] :MD_OUTPUT_GYRO_Z
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :5
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_GYRO_Z
+Reading line from parameter file: 102
+Column [0] :MD_OUTPUT_ROLL
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :6
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_ROLL
+Reading line from parameter file: 103
+Column [0] :MD_OUTPUT_PITCH
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :7
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_PITCH
+Reading line from parameter file: 104
+Column [0] :MD_OUTPUT_YAW
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :MD_OUTPUT
+Column [4] :41
+Column [5] :UNSIGNED
+Column [6] :8
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MD_OUTPUT_YAW
+Reading line from parameter file: 105
+Column [0] :LED1_MODE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :ENUM
+Column [6] :0
+Column [7] :5
+Column [8] :1
+Column [9] :USER_CONTROLLED_DIG_OUTPUT:X_ACCEL_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_ACCEL_MD_OUTPUT:Y_ACCEL_MD_OUTPUT:Z_ACCEL_MD_OUTPUT:X_GYRO_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_GYRO_MD_OUTPUT:Y_GYRO_MD_OUTPUT:Z_GYRO_MD_OUTPUT:ROLL_PWM:PITCH_PWM:YAW_PWM:ROLL_MD_OUTPUT:PITCH_MD_OUTPUT:YAW_MD_OUTPUT:USER_CONTROLLED_PWM_OUTPUT
+Column [10] :0
+Column [11] :32
+Parameter name:  LED1_MODE
+Reading line from parameter file: 106
+Column [0] :LED2_MODE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :ENUM
+Column [6] :5
+Column [7] :5
+Column [8] :1
+Column [9] :USER_CONTROLLED_DIG_OUTPUT:X_ACCEL_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_ACCEL_MD_OUTPUT:Y_ACCEL_MD_OUTPUT:Z_ACCEL_MD_OUTPUT:X_GYRO_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_GYRO_MD_OUTPUT:Y_GYRO_MD_OUTPUT:Z_GYRO_MD_OUTPUT:ROLL_PWM:PITCH_PWM:YAW_PWM:ROLL_MD_OUTPUT:PITCH_MD_OUTPUT:YAW_MD_OUTPUT:USER_CONTROLLED_PWM_OUTPUT
+Column [10] :0
+Column [11] :32
+Parameter name:  LED2_MODE
+Reading line from parameter file: 107
+Column [0] :LED3_MODE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :ENUM
+Column [6] :10
+Column [7] :5
+Column [8] :1
+Column [9] :USER_CONTROLLED_DIG_OUTPUT:X_ACCEL_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_ACCEL_MD_OUTPUT:Y_ACCEL_MD_OUTPUT:Z_ACCEL_MD_OUTPUT:X_GYRO_PWM:Y_ACCEL_PWM:Z_ACCEL_PWM:X_GYRO_MD_OUTPUT:Y_GYRO_MD_OUTPUT:Z_GYRO_MD_OUTPUT:ROLL_PWM:PITCH_PWM:YAW_PWM:ROLL_MD_OUTPUT:PITCH_MD_OUTPUT:YAW_MD_OUTPUT:USER_CONTROLLED_PWM_OUTPUT
+Column [10] :0
+Column [11] :32
+Parameter name:  LED3_MODE
+Reading line from parameter file: 108
+Column [0] :LED1_MODE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :UNSIGNED
+Column [6] :15
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED1_MODE_WE
+Reading line from parameter file: 109
+Column [0] :LED2_MODE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED2_MODE_WE
+Reading line from parameter file: 110
+Column [0] :LED3_MODE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_MODE_CONFIG
+Column [4] :42
+Column [5] :UNSIGNED
+Column [6] :17
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED3_MODE_WE
+Reading line from parameter file: 111
+Column [0] :LED1_UC_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED1_UC_STATE
+Reading line from parameter file: 112
+Column [0] :LED2_UC_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED2_UC_STATE
+Reading line from parameter file: 113
+Column [0] :LED3_UC_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED3_UC_STATE
+Reading line from parameter file: 114
+Column [0] :LED1_UC_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED1_UC_DUTY
+Reading line from parameter file: 115
+Column [0] :LED2_UC_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :11
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED2_UC_DUTY
+Reading line from parameter file: 116
+Column [0] :LED3_UC_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :19
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED3_UC_DUTY
+Reading line from parameter file: 117
+Column [0] :LED_UC_STATE_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :27
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED_UC_STATE_WE
+Reading line from parameter file: 118
+Column [0] :LED_UC_DUTY_WE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_UC_WRITE
+Column [4] :43
+Column [5] :UNSIGNED
+Column [6] :28
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED_UC_DUTY_WE
+Reading line from parameter file: 119
+Column [0] :LED1_OUTPUT_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED1_OUTPUT_STATE
+Reading line from parameter file: 120
+Column [0] :LED2_OUTPUT_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED2_OUTPUT_STATE
+Reading line from parameter file: 121
+Column [0] :LED3_OUTPUT_STATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  LED3_OUTPUT_STATE
+Reading line from parameter file: 122
+Column [0] :LED1_OUTPUT_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED1_OUTPUT_DUTY
+Reading line from parameter file: 123
+Column [0] :LED2_OUTPUT_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :11
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED2_OUTPUT_DUTY
+Reading line from parameter file: 124
+Column [0] :LED3_OUTPUT_DUTY
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :LED_OUTPUT
+Column [4] :44
+Column [5] :UNSIGNED
+Column [6] :19
+Column [7] :8
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  LED3_OUTPUT_DUTY
+Reading line from parameter file: 125
+Column [0] :CONFIG_SAVE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  CONFIG_SAVE
+Reading line from parameter file: 126
+Column [0] :IMU_CALIBRATE
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :1
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CALIBRATE
+Reading line from parameter file: 127
+Column [0] :MP_RESET
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :2
+Column [7] :1
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_RESET
+Reading line from parameter file: 128
+Column [0] :CONFIG_SAVE_ACK
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :3
+Column [7] :1
+Column [8] :1
+Column [9] :
+Column [10] :0
+Column [11] :1
+Parameter name:  CONFIG_SAVE_ACK
+Reading line from parameter file: 129
+Column [0] :IMU_CALIBRATE_ACK
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :4
+Column [7] :1
+Column [8] :1
+Column [9] :
+Column [10] :0
+Column [11] :1
+Parameter name:  IMU_CALIBRATE_ACK
+Reading line from parameter file: 130
+Column [0] :MP_RESET_ACK
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :CONTROL
+Column [4] :45
+Column [5] :UNSIGNED
+Column [6] :5
+Column [7] :1
+Column [8] :1
+Column [9] :
+Column [10] :0
+Column [11] :1
+Parameter name:  MP_RESET_ACK
+Reading line from parameter file: 131
+Column [0] :FRAME_ID
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :UPDATE_NODE_DATA
+Column [4] :46
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :100
+Parameter name:  FRAME_ID
+Reading line from parameter file: 132
+Column [0] :WRITE_PARAMETER_INDEX
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :WRITE_PARAMETER
+Column [4] :47
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :16
+Column [8] :1
+Column [9] :
+Column [10] :0
+Column [11] :65535
+Parameter name:  WRITE_PARAMETER_INDEX
+Reading line from parameter file: 133
+Column [0] :WRITE_PARAMETER_ACK
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :WRITE_PARAMETER
+Column [4] :47
+Column [5] :UNSIGNED
+Column [6] :16
+Column [7] :1
+Column [8] :1
+Column [9] :
+Column [10] :0
+Column [11] :1
+Parameter name:  WRITE_PARAMETER_ACK
+Reading line from parameter file: 134
+Column [0] :INVALID
+Column [1] :MPU_STICK
+Column [2] :0
+Column [3] :INVALID_PACKET
+Column [4] :100
+Column [5] :UNSIGNED
+Column [6] :0
+Column [7] :32
+Column [8] :1
+Column [9] :0
+Column [10] :0
+Column [11] :1
+Parameter name:  INVALID
+Unique frame names: 
+MPU_STICK::IMU_X_RAW
+MPU_STICK::IMU_Y_RAW
+MPU_STICK::IMU_Z_RAW
+MPU_STICK::IMU_X_PROCESSED
+MPU_STICK::IMU_Y_PROCESSED
+MPU_STICK::IMU_Z_PROCESSED
+MPU_STICK::IMU_CONFIG_REG_A
+MPU_STICK::IMU_CONFIG_REG_B
+MPU_STICK::IMU_CONFIG_WRITE_ENABLE
+MPU_STICK::MD_THRESHOLD_TYPE
+MPU_STICK::MD_ACCEL_X_THRESHOLD_LOW
+MPU_STICK::MD_ACCEL_X_THRESHOLD_HIGH
+MPU_STICK::MD_ACCEL_Y_THRESHOLD_LOW
+MPU_STICK::MD_ACCEL_Y_THRESHOLD_HIGH
+MPU_STICK::MD_ACCEL_Z_THRESHOLD_LOW
+MPU_STICK::MD_ACCEL_Z_THRESHOLD_HIGH
+MPU_STICK::MD_GYRO_X_THRESHOLD_LOW
+MPU_STICK::MD_GYRO_X_THRESHOLD_HIGH
+MPU_STICK::MD_GYRO_Y_THRESHOLD_LOW
+MPU_STICK::MD_GYRO_Y_THRESHOLD_HIGH
+MPU_STICK::MD_GYRO_Z_THRESHOLD_LOW
+MPU_STICK::MD_GYRO_Z_THRESHOLD_HIGH
+MPU_STICK::MD_ROLL_THRESHOLD_LOW
+MPU_STICK::MD_ROLL_THRESHOLD_HIGH
+MPU_STICK::MD_PITCH_THRESHOLD_LOW
+MPU_STICK::MD_PITCH_THRESHOLD_HIGH
+MPU_STICK::MD_YAW_THRESHOLD_LOW
+MPU_STICK::MD_YAW_THRESHOLD_HIGH
+MPU_STICK::MP_ROLL_FILTER_CONSTANT
+MPU_STICK::MP_PITCH_FILTER_CONSTANT
+MPU_STICK::MP_YAW_FILTER_CONSTANT
+MPU_STICK::MP_ROLL_ACCEL
+MPU_STICK::MP_ROLL_GYRO
+MPU_STICK::MP_ROLL_FILTER
+MPU_STICK::MP_PITCH_ACCEL
+MPU_STICK::MP_PITCH_GYRO
+MPU_STICK::MP_PITCH_FILTER
+MPU_STICK::MP_YAW_ACCEL
+MPU_STICK::MP_YAW_GYRO
+MPU_STICK::MP_YAW_FILTER
+MPU_STICK::MD_WRITE_CONFIG
+MPU_STICK::MD_OUTPUT
+MPU_STICK::LED_MODE_CONFIG
+MPU_STICK::LED_UC_WRITE
+MPU_STICK::LED_OUTPUT
+MPU_STICK::CONTROL
+MPU_STICK::UPDATE_NODE_DATA
+MPU_STICK::WRITE_PARAMETER
+MPU_STICK::INVALID_PACKET
+Exiting function: read_file(MPU_Stick.csv)
+Entering function: serial_flush()
+Entering function: read_bytes
+Requested number of bytes not read....
+Number of bytes received: 0
+Exiting function: read_bytes
+Number of bytes flushed: 0
+Exiting function: serial_flush()
+Entering function: open_node_connection(0,500,10)
+Entering function: open_node_connection()
+Entering function: send_control_frame(0,1)
+Connection_Management.SYNC_RQST = 0
+Connection_Management.SYNC_ACK = 0
+Connection_Management.OC_RQST = 1
+Connection_Management.OC_ACK = 0
+Connection_Management.CC_RQST = 0
+Connection_Management.CC_ACK = 0
+Entering function ADCP::generate_checksum (raw frame) .....
+Checksum of raw packet/frame [144 8 0 0 0 0] is 103
+Exiting function ADCP::generate_checksum (raw frame) .....
+Entering function: ADCP::raw_to_processed .....
+Raw packet: 144 8 0 0 0 0 103
+Processed packet: 11 155 19 11 11 11 11 114 10
+Exiting function: ADCP::raw_to_processed .....
+Entering function: send_packet
+Writing packet via serial port:
+HEX:	0xb  0x9b  0x13  0xb  0xb  0xb  0xb  0x72  0xa  
+DEC: 	0d11  0d155  0d19  0d11  0d11  0d11  0d11  0d114  0d10  
+Packet not sent successfully ...
+Exiting function: send_packet
+Exiting function: send_control_frame(0,1)
+Requesting connection to node 0
+Entering function: read_control_frame(0,1,500)
+Entering function: receive_packet
+Number of bytes before termination character: 1
+Entering function: ADCP::processed_to_raw .....
+Processed packet: 144 112 67 0 0 112 48 0 24
+Raw packet: 90 56 234 245 101 37 245
+Exiting function: ADCP::processed_to_raw .....
+Target control frame not received !
+Timeout event occured while trying to fetch target control frame.
+Exiting function: read_control_frame(0,1,500)
+Request not acknowledged !
+Invalid error code received !
+Exiting function: open_node_connection()
+Entering function: open_node_connection()
+Entering function: send_control_frame(0,1)
+Connection_Management.SYNC_RQST = 0
+Connection_Management.SYNC_ACK = 0
+Connection_Management.OC_RQST = 1
+Connection_Management.OC_ACK = 0
+Connection_Management.CC_RQST = 0
+Connection_Management.CC_ACK = 0
+Entering function ADCP::generate_checksum (raw frame) .....
+Checksum of raw packet/frame [144 8 0 0 0 0] is 103
+Exiting function ADCP::generate_checksum (raw frame) .....
+Entering function: ADCP::raw_to_processed .....
+Raw packet: 144 8 0 0 0 0 103
+Processed packet: 11 155 19 11 11 11 11 114 10
+Exiting function: ADCP::raw_to_processed .....
+Entering function: send_packet
+Writing packet via serial port:
+HEX:	0xb  0x9b  0x13  0xb  0xb  0xb  0xb  0x72  0xa  
+DEC: 	0d11  0d155  0d19  0d11  0d11  0d11  0d11  0d114  0d10  
+Packet not sent successfully ...
+Exiting function: send_packet
+Exiting function: send_control_frame(0,1)
+Requesting connection to node 0
+Entering function: read_control_frame(0,1,500)
+Entering function: receive_packet
+Number of bytes before termination character: 1
+Entering function: ADCP::processed_to_raw .....
+Processed packet: 144 112 67 0 0 112 48 0 24
+Raw packet: 90 56 234 245 101 37 245
+Exiting function: ADCP::processed_to_raw .....
+Target control frame not received !
+Timeout event occured while trying to fetch target control frame.
+Exiting function: read_control_frame(0,1,500)
+Request not acknowledged !
+Invalid error code received !
+Exiting function: open_node_connection()
+Entering function: open_node_connection()
+Entering function: send_control_frame(0,1)
+Connection_Management.SYNC_RQST = 0
+Connection_Management.SYNC_ACK = 0
+Connection_Management.OC_RQST = 1
+Connection_Management.OC_ACK = 0
+Connection_Management.CC_RQST = 0
+Connection_Management.CC_ACK = 0
+Entering function ADCP::generate_checksum (raw frame) .....
+Checksum of raw packet/frame [144 8 0 0 0 0] is 103
+Exiting function ADCP::generate_checksum (raw frame) .....
+Entering function: ADCP::raw_to_processed .....
+Raw packet: 144 8 0 0 0 0 103
+Processed packet: 11 155 19 11 11 11 11 114 10
+Exiting function: ADCP::raw_to_processed .....
+Entering function: send_packet
+Writing packet via serial port:
+HEX:	0xb  0x9b  0x13  0xb  0xb  0xb  0xb  0x72  0xa  
+DEC: 	0d11  0d155  0d19  0d11  0d11  0d11  0d11  0d114  0d10  
+Packet not sent successfully ...
+Exiting function: send_packet
+Exiting function: send_control_frame(0,1)
+Requesting connection to node 0
+Entering function: read_control_frame(0,1,500)
+Entering function: receive_packet
+Number of bytes before termination character: 1
+Entering function: ADCP::processed_to_raw .....
+Processed packet: 144 112 67 0 0 112 48 0 24
+Raw packet: 90 56 234 245 101 37 245
+Exiting function: ADCP::processed_to_raw .....
+Target control frame not received !
+Timeout event occured while trying to fetch target control frame.
+Exiting function: read_control_frame(0,1,500)
+Request not acknowledged !
+Invalid error code received !
+Exiting function: open_node_connection()
+Entering function: open_node_connection()
+Entering function: send_control_frame(0,1)
+Connection_Management.SYNC_RQST = 0
+Connection_Management.SYNC_ACK = 0
+Connection_Management.OC_RQST = 1
+Connection_Management.OC_ACK = 0
+Connection_Management.CC_RQST = 0
+Connection_Management.CC_ACK = 0
+Entering function ADCP::generate_checksum (raw frame) .....
+Checksum of raw packet/frame [144 8 0 0 0 0] is 103
+Exiting function ADCP::generate_checksum (raw frame) .....
+Entering function: ADCP::raw_to_processed .....
+Raw packet: 144 8 0 0 0 0 103
+Processed packet: 11 155 19 11 11 11 11 114 10
+Exiting function: ADCP::raw_to_processed .....
+Entering function: send_packet
+Writing packet via serial port:
+HEX:	0xb  0x9b  0x13  0xb  0xb  0xb  0xb  0x72  0xa  
+DEC: 	0d11  0d155  0d19  0d11  0d11  0d11  0d11  0d114  0d10  
+Packet not sent successfully ...
+Exiting function: send_packet
+Exiting function: send_control_frame(0,1)
+Requesting connection to node 0
+Entering function: read_control_frame(0,1,500)
+Entering function: receive_packet
+Number of bytes before termination character: 1
+Entering function: ADCP::processed_to_raw .....
+Processed packet: 144 112 67 0 0 112 48 0 24
+Raw packet: 90 56 234 245 101 37 245
+Exiting function: ADCP::processed_to_raw .....
+Target control frame not received !
+Timeout event occured while trying to fetch target control frame.
+Exiting function: read_control_frame(0,1,500)
+Request not acknowledged !
+Invalid error code received !
+Exiting function: open_node_connection()
+Entering function: open_node_connection()
+Entering function: send_control_frame(0,1)
+Connection_Management.SYNC_RQST = 0
+Connection_Management.SYNC_ACK = 0
+Connection_Management.OC_RQST = 1
+Connection_Management.OC_ACK = 0
+Connection_Management.CC_RQST = 0
+Connection_Management.CC_ACK = 0
+Entering function ADCP::generate_checksum (raw frame) .....
+Checksum of raw packet/frame [144 8 0 0 0 0] is 103
+Exiting function ADCP::generate_checksum (raw frame) .....
+Entering function: ADCP::raw_to_processed .....
+Raw packet: 144 8 0 0 0 0 103
+Processed packet: 11 155 19 11 11 11 11 114 10
+Exiting function: ADCP::raw_to_processed .....
+Entering function: send_packet
+Writing packet via serial port:
+HEX:	0xb  0x9b  0x13  0xb  0xb  0xb  0xb  0x72  0xa  
+DEC: 	0d11  0d155  0d19  0d11  0d11  0d11  0d11  0d114  0d10  
+Packet not sent successfully ...
+Exiting function: send_packet
+Exiting function: send_control_frame(0,1)
+Requesting connection to node 0
+Entering function: read_control_frame(0,1,500)
+Entering function: receive_packet

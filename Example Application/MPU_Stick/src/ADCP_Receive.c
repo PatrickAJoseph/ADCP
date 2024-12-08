@@ -6,6 +6,38 @@
 
 const ADCP_Frame_Handler_t ADCP_Frame_Handler_Array[ADCP_N_FRAMES] =
 {
+  {
+   .frame_id = IMU_X_RAW_FID,
+   .prtFrame = (void*)&IMU_X_RAW,
+   .function = (void*)0
+  },
+  {
+    .frame_id = IMU_Y_RAW_FID,
+    .prtFrame = (void*)&IMU_Y_RAW,
+    .function = (void*)0
+  },
+  {
+     .frame_id = IMU_Z_RAW_FID,
+     .prtFrame = (void*)&IMU_Z_RAW,
+     .function = (void*)0
+  },
+  {
+    .frame_id = IMU_X_PROCESSED_FID,
+    .prtFrame = (void*)&IMU_X_PROCESSED,
+    .function = (void*)0
+  },
+  {
+    .frame_id = IMU_Y_PROCESSED_FID,
+    .prtFrame = (void*)&IMU_Y_PROCESSED,
+    .function = (void*)0
+  },
+  {
+     .frame_id = IMU_Z_PROCESSED_FID,
+     .prtFrame = (void*)&IMU_Z_PROCESSED,
+     .function = (void*)0
+   },
+
+
   {.frame_id = IMU_CONFIG_REG_A_FID,
    .prtFrame = (void*)&IMU_CONFIG_REG_A,
    .function = &IMU_CONFIG_REG_A_callback },
@@ -19,6 +51,76 @@ const ADCP_Frame_Handler_t ADCP_Frame_Handler_Array[ADCP_N_FRAMES] =
    .prtFrame = (void*)&MD_THRESHOLD_TYPE,
    .function = &MD_THRESHOLD_TYPE_callback },
 
+   {
+      .frame_id = MP_ROLL_ACCEL_FID,
+      .prtFrame = (void*)&MP_ROLL_ACCEL,
+      .function = (void*)0
+    },
+   {
+       .frame_id = MP_ROLL_GYRO_FID,
+       .prtFrame = (void*)&MP_ROLL_GYRO,
+       .function = (void*)0
+   },
+   {
+        .frame_id = MP_ROLL_FILTER_FID,
+        .prtFrame = (void*)&MP_ROLL_FILTER,
+        .function = (void*)0
+   },
+
+
+   {
+      .frame_id = MP_PITCH_ACCEL_FID,
+      .prtFrame = (void*)&MP_PITCH_ACCEL,
+      .function = (void*)0
+    },
+   {
+       .frame_id = MP_PITCH_GYRO_FID,
+       .prtFrame = (void*)&MP_PITCH_GYRO,
+       .function = (void*)0
+   },
+   {
+        .frame_id = MP_PITCH_FILTER_FID,
+        .prtFrame = (void*)&MP_PITCH_FILTER,
+        .function = (void*)0
+   },
+
+
+   {
+      .frame_id = MP_YAW_ACCEL_FID,
+      .prtFrame = (void*)&MP_YAW_ACCEL,
+      .function = (void*)0
+    },
+   {
+       .frame_id = MP_YAW_GYRO_FID,
+       .prtFrame = (void*)&MP_YAW_GYRO,
+       .function = (void*)0
+   },
+   {
+        .frame_id = MP_YAW_FILTER_FID,
+        .prtFrame = (void*)&MP_YAW_FILTER,
+        .function = (void*)0
+   },
+
+   {
+        .frame_id = MD_OUTPUT_FID,
+        .prtFrame = (void*)&MD_OUTPUT,
+        .function = (void*)0
+   },
+   {
+        .frame_id = LED_OUTPUT_FID,
+        .prtFrame = (void*)&LED_OUTPUT,
+        .function = (void*)0
+   },
+   {
+        .frame_id = WRITE_PARAMETER_FID,
+        .prtFrame = (void*)&WRITE_PARAMETER,
+        .function = (void*)0
+   },
+   {
+        .frame_id = UPDATE_NODE_DATA_FID,
+        .prtFrame = (void*)&UPDATE_NODE_DATA,
+        .function = (void*)0
+   },
 
   {.frame_id = MD_ACCEL_X_THRESHOLD_LOW_FID,
    .prtFrame = (void*)&MD_ACCEL_X_THRESHOLD_LOW,
@@ -106,13 +208,7 @@ const ADCP_Frame_Handler_t ADCP_Frame_Handler_Array[ADCP_N_FRAMES] =
   { .frame_id = CONTROL_FID,
     .prtFrame = (void*)&CONTROL,
     .function = &CONTROL_callback,
-  },
-  {
-   .frame_id = UPDATE_NODE_DATA_FID,
-   .prtFrame = (void*)&UPDATE_NODE_DATA,
-   .function = &UPDATE_NODE_DATA_callback
   }
-
 };
 
 
