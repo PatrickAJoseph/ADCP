@@ -126,6 +126,8 @@ int main(void)
 	Tick_Init();
 	Task_Manager_Init();
 
+	LED_CSD_WRITE_ENABLE.all = 0;
+
     P2IE |= BIT0;               //  Enable interrupt at P2.0.
 
 

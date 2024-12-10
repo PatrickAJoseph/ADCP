@@ -7,7 +7,7 @@
 
 /**************** APPLICATION CONFIGURATIONS ********/
 
-#define	COM_PORT				"COM13"
+#define	COM_PORT				"COM12"
 #define BAUD_RATE				38400
 #define NODE_NAME				"MPU_STICK"
 #define NODE_ID					0
@@ -23,8 +23,11 @@
 const string parameters_to_monitor[] = 
 {
 	"MPU_STICK::IMU_X_PROCESSED::IMU_X_ACCEL_PROCESSED",
+	"MPU_STICK::IMU_X_PROCESSED::IMU_X_GYRO_PROCESSED",
 	"MPU_STICK::IMU_Y_PROCESSED::IMU_Y_ACCEL_PROCESSED",
-	"MPU_STICK::IMU_Z_PROCESSED::IMU_Z_ACCEL_PROCESSED"	
+	"MPU_STICK::IMU_Y_PROCESSED::IMU_Y_GYRO_PROCESSED",	
+	"MPU_STICK::IMU_Z_PROCESSED::IMU_Z_ACCEL_PROCESSED",	
+	"MPU_STICK::IMU_Z_PROCESSED::IMU_Z_GYRO_PROCESSED"		
 };
 
 /**************	MAIN CODE *******************************/
@@ -57,6 +60,8 @@ void* communication_task(void* args)
 	
 	}while((((PCB*)args)->is_active));
 	
+	
+	cout << "\n\n" << endl;
 	cout << "Stopping communication thread" << endl;
 	
 	pthread_exit(NULL);
@@ -85,11 +90,9 @@ void* display_task(void* args)
 		{
 			for(int parameter_index = 0 ; parameter_index < sizeof(parameters_to_monitor)/sizeof(parameters_to_monitor[0]) ; parameter_index++ )
 			{
-				//value = adcp.read_parameter(parameters_to_monitor[parameter_index]);
-				//cout << parameters_to_monitor[parameter_index] << " = " << value << endl; 
+				value = adcp.read_parameter(parameters_to_monitor[parameter_index]);
+				cout << parameters_to_monitor[parameter_index] << " = " << value << endl; 
 			}
-			
-			//cout << value << endl;
 			
 			last_update_time = current_time;
 		}		
@@ -123,6 +126,7 @@ int main()
 	do
 	{
 		current_time = ( 1000 * ( ( (double)(clock() - start_time) ) / (double)CLOCKS_PER_SEC ) );	
+		
 	}while( current_time < RUN_TIME );
 	
 	communication.is_active = 0;

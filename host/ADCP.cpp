@@ -1209,6 +1209,16 @@ void ADCP::write_parameter(unsigned int index,double value)
   
   parameter->value = value;
   
+  #ifdef DEBUG
+	(this->debugLog) << "Parameter name: " << parameter->parameter_name << endl;
+	(this->debugLog) << "Owning frame name:" << parameter->frame_name << endl;
+	(this->debugLog) << "Owning node name:" << parameter->node_name << endl;
+	(this->debugLog) << "Start bit:" << (uint16_t)parameter->start_bit << endl;
+	(this->debugLog) << "Bit length:" << (uint16_t)parameter->bit_length << endl;
+	(this->debugLog) << "Factor:" << parameter->factor << endl;
+	(this->debugLog) << "Offset:" << parameter->offset << endl;
+  #endif
+  
   /* When loading data into the frame, the following conversion has to be done:
   *
   *   frame_value = (actual_value - offset) / factor;
@@ -1216,6 +1226,10 @@ void ADCP::write_parameter(unsigned int index,double value)
   */
   
   frameValue = ( (parameter->value) - (parameter->offset) ) / (parameter->factor);
+
+  #ifdef DEBUG
+	(this->debugLog) << "Frame data to be written: " << (uint32_t)frameValue << endl;
+  #endif  
 
   //  Generate mask for the value: Mask = (2^(bit_length)) - 1.
 
@@ -1250,6 +1264,15 @@ void ADCP::write_parameter(unsigned int index,double value)
     break;
 
     case(ADCP::Parameter_Type_t::UNSIGNED):
+    {
+	  if(parameter->bit_length != 32)	
+        iFrameValue = ( ((uint32_t)frameValue) & mask );
+	  else
+        iFrameValue = ((uint32_t)frameValue & (uint32_t)0xFFFFFFFF);		  
+    }
+    break;
+
+    case(ADCP::Parameter_Type_t::ENUM):
     {
 	  if(parameter->bit_length != 32)	
         iFrameValue = ( ((uint32_t)frameValue) & mask );
@@ -1949,14 +1972,14 @@ void ADCP::receive_packet(PROCESSED_FRAME* packet)
 	
 	
 	ReadFile(this->serialHandle,&temp_rx_byte,1,NULL,NULL);				//	Read single byte from serial port.
-	serial_port_status();												//	Get status of transmit and receive queues.
+	//serial_port_status();												//	Get status of transmit and receive queues.
 	byte_count++;														//	Increment byte counter.
     tempBuffer.push_back(temp_rx_byte);									//	Store received byte in byte vector.
   }while( !(temp_rx_byte == 0x0A |										//	Wait until termination character is received 
 		 ( this->serialPort.RXB_bytes == 0 ) | 							//  or all bytes in serial port have not been read
-		 ( byte_count > 1000 )) ); 										//	or maximum numbe of byte reads have expired.
+		 ( byte_count != 9 )) ); 										//	or maximum numbe of byte reads have expired.
     
-  if(byte_count != 9)
+  if(temp_rx_byte != 0x0A)
   {
 	/* Invalid packet received !. Discard. */
 
@@ -2070,16 +2093,16 @@ void ADCP::receive_packet(PROCESSED_FRAME* packet,uint32_t timeout_ms)
 	
 	
 	ReadFile(this->serialHandle,&temp_rx_byte,1,NULL,NULL);				//	Read single byte from serial port.
-	serial_port_status();												//	Get status of transmit and receive queues.
+	//serial_port_status();												//	Get status of transmit and receive queues.
 	byte_count++;														//	Increment byte counter.
     tempBuffer.push_back(temp_rx_byte);									//	Store received byte in byte vector.
     timeInterval = (uint32_t)((double)(1000 * (double)( clock() - startTime )) / (double)CLOCKS_PER_SEC);
   }while( !(temp_rx_byte == 0x0A |										//	Wait until termination character is received 
 		 ( this->serialPort.RXB_bytes == 0 ) | 							//  or all bytes in serial port have not been read
-		 ( byte_count > 1000 ) |
+		 ( byte_count > 9 ) |
 		 ( timeInterval > timeout_ms )) ); 										//	or maximum numbe of byte reads have expired.
     
-  if(byte_count != 9)
+  if(temp_rx_byte != 0x0A)
   {
 	/* Invalid packet received !. Discard. */
 
@@ -2378,12 +2401,11 @@ void ADCP::send_frame(unsigned int frame_index)
 	
   send_packet(get_frame(frame_index)->pFrame);	
 
-
-  for(int i = 0 ; i < 9 ; i++ )
-  {
-	this->transmitLog << (unsigned int)(get_frame(frame_index)->pFrame.byte[i]) << ",";
-  }
-  
+  #ifdef TX_LOG_ENABLE
+	write_frame_to_transmit_log_file(get_frame(frame_index)->pFrame);
+  #endif  
+ 
+ 
   this->transmitLog << (( (double)clock() - (double)this->logStartTime ) * 1000 ) / (double)CLOCKS_PER_SEC << endl;
 
   #ifdef DEBUG
@@ -2412,13 +2434,10 @@ void ADCP::send_frame(string frame_name)
   generate_checksum( &(get_frame(frame_name)->pFrame) );  
 	
   send_packet(get_frame(frame_name)->pFrame);	
-
-  for(int i = 0 ; i < 9 ; i++ )
-  {
-	this->transmitLog << (unsigned int)(get_frame(frame_name)->pFrame.byte[i]) << ",";
-  }
-  
-  this->transmitLog << (( (double)clock() - (double)this->logStartTime ) * 1000 ) / (double)CLOCKS_PER_SEC << endl;
+	
+  #ifdef TX_LOG_ENABLE
+	write_frame_to_transmit_log_file(get_frame(frame_name)->pFrame);
+  #endif
 
   #ifdef DEBUG
 	(this->debugLog) << "Exiting function: send_frame(" << frame_name << ")" << endl;
@@ -2473,12 +2492,29 @@ uint8_t ADCP::is_frame_valid(string frame_name)
   return(0);
 }
 
+#define RAW						0
+#define PROCESSED				1	
+#define LOG_FILE_PACKET_FORMAT	RAW
 
 void ADCP::write_frame_to_receive_log_file(ADCP::PROCESSED_FRAME frame)
 {
-	for(int i = 0 ; i < 9 ; i++ )
+	ADCP::RAW_FRAME tempRawFrame;
+	
+	ADCP::processed_to_raw(&frame,&tempRawFrame);
+	
+	if(LOG_FILE_PACKET_FORMAT == RAW)
 	{
-		this->receiveLog << (unsigned int)frame.byte[i] << ",";
+		for(int i = 0 ; i < 7 ; i++ )
+		{
+			this->receiveLog << (unsigned int)tempRawFrame.byte[i] << ",";
+		}
+	}
+	else if(LOG_FILE_PACKET_FORMAT == PROCESSED)
+	{
+		for(int i = 0 ; i < 9 ; i++ )
+		{
+			this->receiveLog << (unsigned int)frame.byte[i] << ",";
+		}		
 	}
   
 	this->receiveLog << (( (double)clock() - (double)this->logStartTime ) * 1000 ) / (double)CLOCKS_PER_SEC << endl;	
@@ -2486,9 +2522,23 @@ void ADCP::write_frame_to_receive_log_file(ADCP::PROCESSED_FRAME frame)
 
 void ADCP::write_frame_to_transmit_log_file(ADCP::PROCESSED_FRAME frame)
 {
-	for(int i = 0 ; i < 9 ; i++ )
+	ADCP::RAW_FRAME tempRawFrame;
+	
+	ADCP::processed_to_raw(&frame,&tempRawFrame);
+	
+	if(LOG_FILE_PACKET_FORMAT == RAW)
 	{
-		this->transmitLog << (unsigned int)frame.byte[i] << ",";
+		for(int i = 0 ; i < 7 ; i++ )
+		{
+			this->transmitLog << (unsigned int)tempRawFrame.byte[i] << ",";
+		}
+	}
+	else if(LOG_FILE_PACKET_FORMAT == PROCESSED)
+	{
+		for(int i = 0 ; i < 9 ; i++ )
+		{
+			this->transmitLog << (unsigned int)frame.byte[i] << ",";
+		}		
 	}
   
 	this->transmitLog << (( (double)clock() - (double)this->logStartTime ) * 1000 ) / (double)CLOCKS_PER_SEC << endl;	
@@ -2549,13 +2599,9 @@ uint8_t ADCP::receive_frame(unsigned int index,uint32_t timeout_ms)
 		
 		#endif
 
-		for(int i = 0 ; i < 9 ; i++ )
-		{
-			this->receiveLog << (unsigned int)tempProcessedFrame.byte[i] << ",";
-		}
-	  
-		this->receiveLog << (( (double)clock() - (double)this->logStartTime ) * 1000 ) / (double)CLOCKS_PER_SEC << endl;
-
+		#ifdef RX_LOG_ENABLE
+			write_frame_to_receive_log_file(tempProcessedFrame);
+		#endif
 
 		/* Get details regarding received packet. */
 
@@ -2628,6 +2674,12 @@ uint8_t ADCP::receive_frame(string name,uint32_t timeout_ms)
   
   if(index != -1)
 	result = receive_frame(index,timeout_ms);	
+  else
+  {
+	#ifdef DEBUG
+		(this->debugLog) << "Target frame not found !" << endl;
+    #endif	 
+  }
 
   #ifdef DEBUG
 	(this->debugLog) << "Exiting function receive_frame(" << name << "," << timeout_ms << ")" << endl;
@@ -2937,6 +2989,10 @@ void ADCP::read_and_update_frame(uint32_t timeout_ms)
       uint8_t tempFrameID;
       uint8_t tempPriority;
       //ADCP::PROCESSED_FRAME tempProcessedFrame;	  
+		
+	  #ifdef RX_LOG_ENABLE
+		write_frame_to_receive_log_file(processedFrame);
+	  #endif	
 		
 	  get_DF((void*)&tempFrameData,&tempNodeID,&tempFrameID,&tempPriority,&processedFrame);
 
@@ -4072,7 +4128,11 @@ vector<ADCP::PARAMETER_SAMPLES> ADCP::monitor_parameters(vector<string> paramete
 
 			raw_to_processed(&rawPacket,&processedFrame);
 			
-			write_frame_to_receive_log_file(processedFrame);	
+			#ifdef RX_LOG_ENABLE
+			
+				write_frame_to_receive_log_file(processedFrame);
+
+			#endif		
 		}
 		
 		uint32_t tempFrameData = 0;
@@ -4157,3 +4217,50 @@ uint32_t ADCP::get_cycle_time(string frame_name,uint32_t timeout_ms)
   
   return(interval_ms);
 }	
+
+int32_t ADCP::get_enum_index(const string& parameter_name,const string& enum_string)
+{
+	#ifdef DEBUG
+	  (this->debugLog) << "Entering function: get_enum_index(" << parameter_name << "," << enum_string << ")" << endl;
+	#endif
+
+	int32_t index = -1;
+
+	for(auto itrParameter = this->parameters.begin() ; itrParameter != this->parameters.end(); itrParameter++ )
+	{
+		if( (*itrParameter).parameter_name == parameter_name )
+		{
+			#ifdef DEBUG
+				(this->debugLog) << "Parameter found ! (" << parameter_name << ")" << endl;
+			#endif
+			
+			for(int i = 0 ; i < (*itrParameter).enum_values.size() ; i++ )
+			{
+				if( (*itrParameter).enum_values[i] == enum_string )
+				{
+					#ifdef DEBUG
+						(this->debugLog) << "Enum string found ! (" << enum_string << ")" << endl;
+					#endif
+					
+					index = i;					
+				}
+			}
+			
+			if( index != -1 )
+			{
+				break;
+			}
+		}
+	}
+
+	#ifdef DEBUG
+		if( index == -1 )
+			(this->debugLog) << "Enum value not found" << endl;
+	#endif
+
+	return(index);
+
+	#ifdef DEBUG
+	  (this->debugLog) << "Exiting function: get_enum_index(" << parameter_name << "," << enum_string << ")" << endl;
+	#endif
+}

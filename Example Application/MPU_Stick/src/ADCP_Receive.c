@@ -121,6 +121,11 @@ const ADCP_Frame_Handler_t ADCP_Frame_Handler_Array[ADCP_N_FRAMES] =
         .prtFrame = (void*)&UPDATE_NODE_DATA,
         .function = (void*)0
    },
+   {
+        .frame_id = LED_CSD_WRITE_ENABLE_FID,
+        .prtFrame = (void*)&LED_CSD_WRITE_ENABLE,
+        .function = &LED_CSD_WRITE_ENABLE_callback
+   },
 
   {.frame_id = MD_ACCEL_X_THRESHOLD_LOW_FID,
    .prtFrame = (void*)&MD_ACCEL_X_THRESHOLD_LOW,
@@ -925,6 +930,22 @@ void MD_WRITE_CONFIG_callback()
 
 void LED_MODE_CONFIG_callback()
 {
+    /*
+
+    if(LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED1_MODE_WE)
+    {
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_MODE_WE);
+    }
+    if(LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED2_MODE_WE)
+    {
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_MODE_WE);
+    }
+    if(LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED3_MODE_WE)
+    {
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_MODE_WE);
+    }
+
+
     if(LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED1_MODE_WE)
     {
         LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED1_MODE_WE = 0;
@@ -957,10 +978,101 @@ void LED_MODE_CONFIG_callback()
 
         LED_update();
     }
+
+    */
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_MODE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_MODE_WRITE_ENABLE= 0;
+
+        LED1_config.LED_config_segments.LED_mode = LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED1_MODE;
+
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_MODE);
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_MODE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_MODE_WRITE_ENABLE = 0;
+
+        LED2_config.LED_config_segments.LED_mode = LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED2_MODE;
+
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_MODE);
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_MODE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_MODE_WRITE_ENABLE = 0;
+
+        LED3_config.LED_config_segments.LED_mode = LED_MODE_CONFIG.LED_MODE_CONFIG_segments.LED3_MODE;
+
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_MODE);
+
+        LED_update();
+    }
+
+
 }
 
 void LED_UC_WRITE_callback()
 {
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_STATE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_STATE_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_UC_STATE);
+        LED1_config.LED_config_segments.LED_state = LED_UC_WRITE.LED_UC_WRITE_segments.LED1_UC_STATE;
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_STATE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_STATE_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_UC_STATE);
+        LED2_config.LED_config_segments.LED_state = LED_UC_WRITE.LED_UC_WRITE_segments.LED2_UC_STATE;
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_STATE_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_STATE_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_UC_STATE);
+        LED3_config.LED_config_segments.LED_state = LED_UC_WRITE.LED_UC_WRITE_segments.LED3_UC_STATE;
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_DUTY_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_DUTY_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_UC_DUTY);
+        LED1_config.LED_config_segments.LED_duty = LED_UC_WRITE.LED_UC_WRITE_segments.LED1_UC_DUTY;
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_DUTY_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_DUTY_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_UC_DUTY);
+        LED2_config.LED_config_segments.LED_duty = LED_UC_WRITE.LED_UC_WRITE_segments.LED2_UC_DUTY;
+
+        LED_update();
+    }
+
+    if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_DUTY_WRITE_ENABLE)
+    {
+        LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_DUTY_WRITE_ENABLE = 0;
+        write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_UC_DUTY);
+        LED3_config.LED_config_segments.LED_duty = LED_UC_WRITE.LED_UC_WRITE_segments.LED3_UC_DUTY;
+
+        LED_update();
+    }
+
     if(LED_UC_WRITE.LED_UC_WRITE_segments.LED_UC_DUTY_WE)
     {
         LED_UC_WRITE.LED_UC_WRITE_segments.LED_UC_DUTY_WE = 0;
@@ -990,6 +1102,7 @@ void LED_UC_WRITE_callback()
 
         LED_update();
     }
+
 }
 
 void CONTROL_callback()
@@ -1263,3 +1376,45 @@ void UPDATE_NODE_DATA_callback()
     }
 }
 
+
+void LED_CSD_WRITE_ENABLE_callback()
+{
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_MODE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_MODE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_MODE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_MODE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_MODE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_MODE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_STATE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_STATE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_STATE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_STATE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_STATE_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_STATE_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED1_DUTY_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED1_DUTY_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED2_DUTY_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED2_DUTY_WRITE_ENABLE);
+   }
+   if(LED_CSD_WRITE_ENABLE.LED_CSD_WRITE_ENABLE_segments.LED3_DUTY_WRITE_ENABLE)
+   {
+       write_parameter_acknowledgement(WRITE_PARAMETER_INDEX__LED3_DUTY_WRITE_ENABLE);
+   }
+
+
+}

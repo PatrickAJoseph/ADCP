@@ -852,6 +852,15 @@ class ADCP
 	*/
 	
 	uint32_t get_cycle_time(string frame_name,uint32_t timeout_ms); 
+	
+	/*
+	*	@brief:								Gets index of enumeration for given parameter.
+	*	@parameter name:					Parameter name
+	*	@parameter enum_string:				Enum string
+	*
+	*/
+	
+	int32_t get_enum_index(const string& parameter_name,const string& enum_string);
 };
 
 
