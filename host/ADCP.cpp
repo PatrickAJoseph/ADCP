@@ -2398,9 +2398,21 @@ void ADCP::send_frame(unsigned int frame_index)
 	
   generate_checksum(&(get_frame(frame_index)->rFrame));
   generate_checksum(&(get_frame(frame_index)->pFrame));  
+
+  this->Error_Status_Frame.WDPACK = 0;
 	
   send_packet(get_frame(frame_index)->pFrame);	
-
+  
+  for(int i = 0 ; i < this->write_retry_count ; i++)	
+  {
+	read_control_frame(get_frame(frame_index)->rFrame.byte[0] & 0x0F, ADCP::Frame_Type_t::ERROR_STATUS,this->write_retry_interval);
+	
+	if(this->Error_Status_Frame.WDPACK)
+	{
+		break;
+	}
+  }
+  
   #ifdef TX_LOG_ENABLE
 	write_frame_to_transmit_log_file(get_frame(frame_index)->pFrame);
   #endif  

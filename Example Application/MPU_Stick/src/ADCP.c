@@ -850,9 +850,10 @@ void ADCP_send_control_frame(uint8_t node_id, uint8_t control_frame_type)
     case(ADCP_ERROR_AND_STATUS):
     {
         rawPacket.byte[0] = ( ( 1 << 7 ) | ( 3 << 4 ) | ( node_id & 0x0F ) );
-        rawPacket.byte[1] = (  ( (uint8_t)ADCP_Error_Status_Frame.SREQ << 3 ) |
-                               ( (uint8_t)ADCP_Error_Status_Frame.SACK << 2 ) |
-                               ( (uint8_t)ADCP_Error_Status_Frame.QSTAT << 0 ) );
+        rawPacket.byte[1] = (  ( (uint8_t)ADCP_Error_Status_Frame.DPWACK << 4 ) |
+                               ( (uint8_t)ADCP_Error_Status_Frame.SREQ   << 3 ) |
+                               ( (uint8_t)ADCP_Error_Status_Frame.SACK   << 2 ) |
+                               ( (uint8_t)ADCP_Error_Status_Frame.QSTAT  << 0 ) );
         rawPacket.byte[2] = ADCP_Error_Status_Frame.QSZ;
         rawPacket.byte[3] = ADCP_Error_Status_Frame.NES;
         rawPacket.byte[4] = ADCP_Error_Status_Frame.AERR_HIGH;
@@ -1042,6 +1043,20 @@ void ADCP_Receive_Handler()
                             data |= ( (uint32_t)rawPacket.byte[5] << 0  );
 
                             *((uint32_t*)ADCP_Frame_Handler_Array[i].prtFrame) = data;
+
+
+                            /* Acknowledge writing of data packet by setting ACK bit. */
+
+                            ADCP_Error_Status_Frame.DPWACK = 1;
+
+                            /* Send error and status packet back to host letting it
+                             * know that data packet was received successfully. */
+
+                            ADCP_send_control_frame(ADCP_NODE_ID,ADCP_ERROR_AND_STATUS);
+
+                            /* Set the data packet write acknowledgment bit to 0. */
+
+                            ADCP_Error_Status_Frame.DPWACK = 0;
 
                             /* If function handle is valid. */
 

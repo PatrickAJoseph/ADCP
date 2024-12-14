@@ -24,6 +24,9 @@ class ADCP
 	COMSTAT serialStatus;
 	DCB serialDCB;
 	
+	uint32_t write_retry_interval;
+	uint32_t write_retry_count;
+	
 	typedef struct _DATA_FRAME
 	{
 	  uint8_t priority;
@@ -101,6 +104,7 @@ class ADCP
 	  uint32_t QSTAT:2;				//	Device receiver queue status.
 	  uint32_t SACK:1;				//	Status acknowledgement.
 	  uint32_t SREQ:1;				//	Status request.
+	  uint32_t WDPACK:1;			//	Data packet write acknowledgement.
 	}Error_Status_Frame;
 
 	typedef enum _CHECKSUM_STATUS_t
@@ -233,6 +237,8 @@ class ADCP
 		this->Connection_Management_Frame = {0};
 		this->Remote_Request_Frame        = {0};
 		this->Error_Status_Frame		  = {0};
+		
+		//cout << "ADCP class created" << endl;
 	}
 	
 	/* Destructor. */

@@ -152,6 +152,7 @@ struct _Error_Status_Frame
   uint8_t QSTAT:2;             //  Device receiver queue status.
   uint8_t SACK:1;              //  Status acknowledgement.
   uint8_t SREQ:1;              //  Status request.
+  uint8_t DPWACK:1;            //  Data packet write acknowledgement.
 }ADCP_Error_Status_Frame;
 
 extern uint8_t ADCP_connection_status;
